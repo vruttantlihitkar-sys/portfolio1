@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Vruttant Lihitkar | Data Analyst</title>
+  <meta name="description" content="Data Analyst skilled in SQL, Python, Excel, and Power BI. Portfolio showcasing analytics projects and dashboards.">
+  <meta name="keywords" content="Data Analyst India, SQL Analyst, Power BI Analyst, Python Data Analyst">
+  <link rel="canonical" href="https://vruttant.in">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vruttant Lihitkar | Data Analyst Portfolio">
+  <meta property="og:description" content="SQL, Python, Power BI analytics projects and dashboards">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- GitHub Calendar -->
+  <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+
+  <style>
+    :root {
+      --bg-dark: #09090b;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --primary: #4ade80;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --glow: radial-gradient(circle at center, rgba(74,222,128,0.15) 0%, rgba(0,0,0,0) 70%);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg-dark);
+      background-image:
+        radial-gradient(at 0% 0%, rgba(96,165,250,0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(74,222,128,0.1) 0px, transparent 50%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+    .container { max-width: 1000px; margin: auto; padding: 0 24px; }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(12px);
+      background: rgba(9,9,11,0.7);
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 24px;
+    }
+
+    nav h1 { font-size: 1.25rem; font-weight: 700; }
+    nav h1 span { color: var(--primary); }
+
+    nav .links { display: flex; gap: 24px; }
+
+    nav a { color: var(--text-muted); font-weight: 500; }
+    nav a:hover { color: var(--text-main); }
+
+    nav a.btn-cta {
+      padding: 8px 20px;
+      border-radius: 99px;
+      background: var(--text-main);
+      color: #000;
+      font-weight: 600;
+    }
+
+    nav a.btn-cta:hover { background: var(--primary); }
+
+    /* HERO */
+    .hero {
+      padding: 100px 0 80px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero h2 {
+      font-size: 3.4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      background: linear-gradient(to right, #fff, #9ca3af);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero h2 span {
+      display: block;
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+      -webkit-text-fill-color: var(--primary);
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin-bottom: 32px;
+    }
+
+    .buttons { display: flex; gap: 16px; }
+
+    .btn-primary {
+      padding: 12px 28px;
+      border-radius: 8px;
+      background: var(--primary);
+      color: #000;
+      font-weight: 600;
+    }
+
+    .btn-secondary {
+      padding: 12px 28px;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+    }
+
+    .hero-image {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image::before {
+      content: '';
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      background: var(--glow);
+      filter: blur(40px);
+      z-index: -1;
+    }
+
+    .hero-image img {
+      width: 280px;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      transform: rotate(-3deg);
+    }
+
+    section { padding: 60px 0; }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--card-border);
+    }
+
+    /* SKILLS */
+    .skill-grid { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    .skill-tag {
+      padding: 10px 20px;
+      border-radius: 99px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--text-muted);
+    }
+
+    /* PROJECTS */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .project-card:hover { transform: translateY(-8px); }
+
+    .project-img-wrapper { height: 200px; overflow: hidden; }
+
+    .project-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-info { padding: 24px; }
+
+    .project-info p { color: var(--text-muted); font-size: 0.95rem; }
+
+    .project-link { color: var(--primary); font-weight: 600; }
+
+    /* INFO */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .info-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .highlight { color: var(--primary); }
+
+    /* GITHUB */
+    .calendar {
+      border: 1px solid var(--card-border);
+      border-radius: 16px;
+      padding: 20px;
+      background: var(--card-bg);
+    }
+
+    /* LEETCODE */
+    .leet-container {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--card-border);
+      background: #000;
+    }
+
+    footer {
+      margin-top: 80px;
+      padding: 40px 0;
+      border-top: 1px solid var(--card-border);
+      text-align: center;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .buttons { justify-content: center; }
+      .hero-image { order: -1; }
+      .info-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container">
+    <h1>Vruttant<span>.</span></h1>
+    <div class="links">
+      <a href="https://github.com/vruttantlihitkar-sys" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/vruttantlihitkar/" class="btn-cta" target="_blank">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<section class="hero">
+  <div>
+    <h2><span>Data Analyst</span>Turning Data into Decisions</h2>
+    <p>
+      Data analyst with hands-on experience in SQL, Python, Excel, and Power BI.
+      I analyze datasets, build dashboards, and translate insights into business decisions.
+    </p>
+    <div class="buttons">
+      <a href="#projects" class="btn-primary">View Work</a>
+      <a href="Vruttant_Lihitkar_Data_Analyst.pdf" class="btn-secondary" target="_blank">Resume</a>
+    </div>
+  </div>
+  <div class="hero-image">
+    <img src="vruttant.jpeg" alt="Vruttant Lihitkar">
+  </div>
+</section>
+
+<section>
+  <h3 class="section-title">Technical Skills</h3>
+  <div class="skill-grid">
+    <div class="skill-tag">SQL</div>
+    <div class="skill-tag">Python</div>
+    <div class="skill-tag">Power BI</div>
+    <div class="skill-tag">Excel</div>
+    <div class="skill-tag">Tableau</div>
+    <div class="skill-tag">EDA</div>
+    <div class="skill-tag">Dashboarding</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h3 class="section-title">Featured Projects</h3>
+  <div class="project-grid">
+
+    <div class="project-card">
+      <div class="project-img-wrapper">
+        <img src="swiggy.png" alt="Swiggy Analytics">
+      </div>
+      <div class="project-info">
+        <h4>Swiggy Delivery Performance</h4>
+        <p>Identified delivery bottlenecks and SLA drop-offs using KPI and cost analysis.</p>
+        <a href="#" class="project-link">View Case Study →</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-img-wrapper">
+        <img src="paytm.png" alt="Paytm Analysis">
+      </div>
+      <div class="project-info">
+        <h4>Paytm Payment Analysis</h4>
+        <p>Analyzed transaction trends, recurring expenses, and category-wise spending.</p>
+        <a href="#" class="project-link">View Case Study →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h3 class="section-title">GitHub Activity</h3>
+  <div class="calendar">Loading GitHub data…</div>
+</section>
+
+<section>
+  <h3 class="section-title">Problem Solving</h3>
+  <div class="leet-container">
+    <img id="leetcode-card"
+      src="https://leetcard.jacoblin.cool/1Hzm7BYNNd?theme=dark&font=Outfit&border=0&ext=heatmap"
+      style="width:100%; display:block;"
+      alt="LeetCode Stats">
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Vruttant Lihitkar. Built with data.</p>
+</footer>
+
+</div>
+
+<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+<script>
+  GitHubCalendar(".calendar", "vruttantlihitkar-sys", { responsive: true });
+
+  setInterval(() => {
+    const img = document.getElementById("leetcode-card");
+    img.src =
+      "https://leetcard.jacoblin.cool/1Hzm7BYNNd?theme=dark&font=Outfit&border=0&ext=heatmap&t="
+      + Date.now();
+  }, 300000);
+</script>
+
+</body>
+</html>
